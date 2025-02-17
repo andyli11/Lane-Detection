@@ -1,46 +1,41 @@
 #**Finding Lane Lines on the Road**
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
-
 Overview
 ---
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
-
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md
-
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
-
+This project will detect lane lines in images using Python and OpenCV ("Open-Source Computer Vision"), which is a package that has many useful tools for analyzing images.  
 
 The pipeline
 ---
+<img src="images/pipeline.png" width="850" alt="Combined Image" />
+
 
 First the image is converted to hsv
 
-![title](test_images/figure_1.png)
+<img src="images/hsv.png" width="400" alt="Combined Image" />
 
 Then filtered it with white only
 
-![title](test_images/figure_2.png)
+<img src="images/grayscale.png" width="400" alt="Combined Image" />
 
 Applied gaussian blur
 
-![title](test_images/figure_3.png)
+<img src="images/blur.png" width="400" alt="Combined Image" />
 
 Applied canny edge detection
 
-![title](test_images/figure_4.png)
+<img src="images/edge.png" width="400" alt="Combined Image" />
 
 Defined region of interest
 
-![title](test_images/figure_5.png)
+<img src="images/roi.png" width="400" alt="Combined Image" />
 
 Setup hough lines & laid them over initial image
 
-![title](test_images/figure_6.png)
+<img src="images/hough.png" width="400" alt="Combined Image" />
 
 Extrapolated lines in draw_lines
 
@@ -61,7 +56,7 @@ Extrapolated lines in draw_lines
 
 Here is what the end result looked like:
 
-![title](test_images/figure_7.png)
+<img src="images/draw.png" width="480" alt="Combined Image" />
 
 Potential shortcomings
 ---
